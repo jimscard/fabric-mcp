@@ -15,4 +15,5 @@ RUN fabric-mcp --version
 HEALTHCHECK --interval=30s --timeout=10s --start-period=5s --retries=3 \
     CMD fabric-mcp --version || exit 1
 
-CMD ["fabric-mcp", "--transport", "stdio"]
+ENTRYPOINT ["fabric-mcp"]
+CMD ["--transport", "stdio"]
